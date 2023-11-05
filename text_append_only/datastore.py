@@ -1,8 +1,6 @@
 import os
 import json
 
-# testing tests
-
 class TextOnlyAppendDatastore:
     def __init__(self, segment_size_threshold, db_name):
         self.index = {}  # In-memory index
