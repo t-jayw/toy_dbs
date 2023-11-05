@@ -1,10 +1,10 @@
 import unittest
 import os
 import shutil
-from text_append_only.datastore import Datastore
+from text_append_only.datastore import TextOnlyAppendDatastore
 
 class TestTextOnlyAppendDatastore(unittest.TestCase):
-    db_name = 'test_text_only_append/test_data'
+    db_name = 'test_text_only_append_data'
     db_path = f'{db_name}'
     segment_size_threshold = 64
 
@@ -22,7 +22,7 @@ class TestTextOnlyAppendDatastore(unittest.TestCase):
 
     def setUp(self):
         # Instantiate the Datastore before each test
-        self.datastore = Datastore(self.segment_size_threshold, self.db_name)
+        self.datastore = TextOnlyAppendDatastore(self.segment_size_threshold, self.db_name)
 
     def tearDown(self):
         # Close the datastore and remove files after each test

@@ -1,7 +1,7 @@
 import os
 import json
 
-class Datastore:
+class TextOnlyAppendDatastore:
     def __init__(self, segment_size_threshold, db_name):
         self.index = {}  # In-memory index
         self.segment_size_threshold = segment_size_threshold  # Max size of each segment file
